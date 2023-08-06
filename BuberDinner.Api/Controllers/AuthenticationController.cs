@@ -31,7 +31,7 @@ public class AuthenticationController : ApiController
         
         return authResult.Match(
             resultAuth => Ok(_mapper.Map<AuthenticationResponse>(resultAuth)),
-            errors => Problem(errors)
+            Problem
         );
     }
 
@@ -49,7 +49,7 @@ public class AuthenticationController : ApiController
         
         return authResult.Match(
             resultAuth => Ok(_mapper.Map<AuthenticationResponse>(resultAuth)),
-            errors => Problem(errors)
+            Problem
         );
     }
 }
