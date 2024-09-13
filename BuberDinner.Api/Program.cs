@@ -1,5 +1,11 @@
+using BuberDinner.Application;
+using BuberDinner.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 {
+    builder.Services
+        .AddApplication()
+        .AddInfrastructure();
     // Add services to the container.
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
